@@ -24,7 +24,7 @@ class UserController(
         return "It's working in User Service on PORT ${env.getProperty("local.server.port")}"
     }
 
-    @GetMapping("welcome")
+    @GetMapping("/welcome")
     fun welcome(
         @Value("\${greeting.message}") message: String
     ): String {

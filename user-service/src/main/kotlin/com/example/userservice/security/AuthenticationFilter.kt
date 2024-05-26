@@ -25,7 +25,7 @@ class AuthenticationFilter(
 
     override fun attemptAuthentication(request: HttpServletRequest, response: HttpServletResponse): Authentication {
         val creds = jacksonObjectMapper().readValue(request.inputStream, RequestLogin::class.java)
-        println(creds)
+        //println(creds)
         return authenticationManager.authenticate(
             UsernamePasswordAuthenticationToken(creds.email, creds.pwd, ArrayList())
         )

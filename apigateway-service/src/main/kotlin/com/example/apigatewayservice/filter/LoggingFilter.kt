@@ -1,4 +1,4 @@
-package com.example.apigatewayservice.config
+package com.example.apigatewayservice.filter
 
 import com.example.apigatewayservice.LazyLogging
 import org.springframework.cloud.gateway.filter.GatewayFilter
