@@ -8,4 +8,4 @@ spring:
     config:
       server:
         git:
-          uri: file:///Users/aden.j/cloud/msa/git-local-repo
+          uri: file:///Users/aden.j/cloud/newnew/msa/git-local-repo

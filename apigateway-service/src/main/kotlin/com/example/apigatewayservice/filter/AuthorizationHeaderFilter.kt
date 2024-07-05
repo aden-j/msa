@@ -32,7 +32,7 @@ class AuthorizationHeaderFilter(
             val response = exchange.response
 
             if (!request.headers.containsKey(HttpHeaders.AUTHORIZATION)) {
-                onError(exchange, "No autorization header", HttpStatus.UNAUTHORIZED)
+                onError(exchange, "No authorization header", HttpStatus.UNAUTHORIZED)
             }
 
             else {
