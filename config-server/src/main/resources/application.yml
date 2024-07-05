@@ -4,8 +4,26 @@ server:
 spring:
   application:
     name: config-server
+  profiles:
+    active: native
   cloud:
     config:
       server:
+        native:
+          search-locations: file:///Users/aden.j/cloud/newnew/file-repo
         git:
-          uri: file:///Users/aden.j/cloud/newnew/msa/git-local-repo
+          uri: https://github.com/aden-j/spring-cloud-config
+          username: aden-j
+          password: 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
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
