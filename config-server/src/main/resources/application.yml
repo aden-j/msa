@@ -14,7 +14,7 @@ spring:
         git:
           uri: https://github.com/aden-j/spring-cloud-config
           username: aden-j
-          password: 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
+          #password: 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
 
   rabbitmq:
     host: 127.0.0.1
