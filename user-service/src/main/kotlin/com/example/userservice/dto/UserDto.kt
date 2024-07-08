@@ -1,5 +1,6 @@
 package com.example.userservice.dto
 
+import com.example.userservice.vo.ResponseOrder
 import java.time.Instant
 
 data class UserDto(
@@ -10,5 +11,5 @@ data class UserDto(
     val createdAt: Instant? = null,
     var decryptedPwd: String? = null,
     val encryptedPwd: String? = null,
-    //val orders: List<ResponseOrder>
+    val orders: List<ResponseOrder> = emptyList()
 )

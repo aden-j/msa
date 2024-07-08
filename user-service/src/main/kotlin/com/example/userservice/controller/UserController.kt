@@ -61,10 +61,13 @@ class UserController(
     }
 
     @GetMapping("/users/{userId}")
-    fun getUsers(
+    fun getUser(
         @PathVariable userId: String
     ): ResponseEntity<ResponseUser> {
+        println("######")
         val user = userService.getUserByUserId(userId)
+        println("######")
+        println(user)
         return ResponseEntity.status(HttpStatus.OK).body(user.toDto())
     }
 }
@@ -75,6 +78,6 @@ fun UserDto.toDto(): ResponseUser {
         email = this.email,
         name = this.name,
         userId = this.userId,
-        orders = emptyList(),
+        orders = this.orders,
     )
 }

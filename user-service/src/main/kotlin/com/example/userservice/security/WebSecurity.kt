@@ -55,8 +55,8 @@ class WebSecurity(
                     .requestMatchers(AntPathRequestMatcher("/welcome/**")).permitAll()
                     .requestMatchers(AntPathRequestMatcher("/user-service/health-check/**")).permitAll()
                     .requestMatchers(AntPathRequestMatcher("/h2-console/**")).permitAll()
-                    .requestMatchers(AntPathRequestMatcher("/users", "POST")).permitAll()
-                    .requestMatchers(AntPathRequestMatcher("/users", "GET")).permitAll()
+                    .requestMatchers(AntPathRequestMatcher("/users/**", "POST")).permitAll()
+                    .requestMatchers(AntPathRequestMatcher("/users/**", "GET")).permitAll()
                     .requestMatchers(AntPathRequestMatcher("/h2-console/**"))
                     .permitAll() //                        .requestMatchers("/**").access(this::hasIpAddress)
                     .requestMatchers("/**").access(

@@ -93,8 +93,8 @@ management:
       exposure:
         include: refresh, health, beans, httptrace, busrefresh
 
-token:
-  expiration_time: 86400000
-  secret: abcdefghijklmnopqrstuvwxyzabcdef
+#token:
+#  expiration_time: 86400000
+#  secret: abcdefghijklmnopqrstuvwxyzabcdef
 
 

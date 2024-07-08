@@ -1,6 +1,7 @@
 package com.example.userservice.jpa
 
 import com.example.userservice.dto.UserDto
+import com.example.userservice.vo.ResponseOrder
 import jakarta.persistence.*
 import java.time.Instant
 
@@ -26,7 +27,7 @@ data class UserEntity(
     @Column(unique = true)
     val createdAt: Instant? = null,
 ){
-    fun toModel() = UserDto(
+    fun toModel(orders: List<ResponseOrder>?) = UserDto(
         email = email,
         name = name,
         pwd = encryptedPwd,
@@ -34,6 +35,7 @@ data class UserEntity(
         createdAt = createdAt,
         encryptedPwd = encryptedPwd,
         decryptedPwd = encryptedPwd,
+        orders = orders ?: emptyList()
     )
 }
 
